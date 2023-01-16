@@ -1,0 +1,15 @@
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\bin\Debug\net6.0\DOTW.exe
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\bin\Debug\net6.0\DOTW.deps.json
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\bin\Debug\net6.0\DOTW.runtimeconfig.json
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\bin\Debug\net6.0\DOTW.dll
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\bin\Debug\net6.0\DOTW.pdb
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\obj\Debug\net6.0\DOTW.csproj.AssemblyReference.cache
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\obj\Debug\net6.0\DOTW.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\obj\Debug\net6.0\DOTW.AssemblyInfoInputs.cache
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\obj\Debug\net6.0\DOTW.AssemblyInfo.cs
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\obj\Debug\net6.0\DOTW.csproj.CoreCompileInputs.cache
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\obj\Debug\net6.0\DOTW.dll
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\obj\Debug\net6.0\refint\DOTW.dll
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\obj\Debug\net6.0\DOTW.pdb
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\obj\Debug\net6.0\DOTW.genruntimeconfig.cache
+C:\Users\le.schmidt\source\repos\LeilaSchmidt\DOTNET_Console_Applicationn\DOTW\DOTW\obj\Debug\net6.0\ref\DOTW.dll
