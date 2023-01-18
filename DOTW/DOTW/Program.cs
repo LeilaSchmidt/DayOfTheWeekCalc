@@ -9,84 +9,58 @@ namespace DOTW
             //program runs until user types no or n
             while (rerun == true)
             {
-                int year;
-                int month;
-                int day;
+                int year = 0;
+                int month = 0;
+                int day = 0;
                 string neg = ("-");
+                bool go = false;
 
                 //-------------YEAR------------//
-                //asks for year
-                Console.WriteLine("Please enter a year: ");
-                var yearr = Console.ReadLine();
-                //checks if year is int or negative 
-                while (!int.TryParse(yearr, out year) || yearr.Contains(neg))
+                //while go false, loop
+                 while (go == false)
                 {
-                    Console.WriteLine("This is not a valid year, please try again: ");
-                    yearr = Console.ReadLine();
+                    Console.WriteLine("Please enter a valid year: ");
+                    string yearr = Console.ReadLine();
+                    // checks: if int, negative (both cases)
+                    if(!int.TryParse(yearr, out year) || yearr.Contains(neg) || year < 0)
+                    {
+                        Console.WriteLine("This is not a valid year. ");
+                        continue;
+                    }
+                    go = true;
                 }
-                year = Convert.ToInt32(yearr);
-
 
                 //-------------MONTH------------//
-                //asks for month
-                Console.WriteLine("Please enter a month: ");
-                var monthh = Console.ReadLine();
-                //checks if input is int or negative
-                while (!int.TryParse(monthh, out month) || monthh.Contains(neg))
+                go = false;
+                //while go false, loop
+                while (go == false)
                 {
-                    Console.WriteLine("This is not a valid month, please try again: ");
-                    monthh = Console.ReadLine();
+                    Console.WriteLine("Please enter a valid month: ");
+                    string monthh = Console.ReadLine();
+                    //checks: if int, if neg, if > 12, if < 1
+                    if (!int.TryParse(monthh, out month) || monthh.Contains(neg) || month < 0 || month > 12 || month < 1)
+                    {
+                        Console.WriteLine("That was not a valid month. ");
+                        continue;
+                    }
+                    go = true;
                 }
-                month = Convert.ToInt32(monthh);
-
-                //month parameters
-                while (month > 12 || month < 1)
-                {
-                    Console.WriteLine("That month is invalid. Please enter a valid month.");
-                    month = Convert.ToInt32(Console.ReadLine());
-                }
-
-
+                
                 //-------------DAY------------//
-                //asks for day
-                Console.WriteLine("Please enter a day: ");
-                var dayy = Console.ReadLine();
-
-                //checks if input is int or negative
-                while (!int.TryParse(dayy, out day) || dayy.Contains(neg))
+                go = false;
+                //while go false, loop
+                while (go == false)
                 {
-                    Console.WriteLine("This is not a valid day, please try again: ");
-                    dayy = Console.ReadLine();
+                    Console.WriteLine("Please enter a valid day: ");
+                    string dayy = Console.ReadLine();
+                    //checks if: int, neg, > 31, < 1, no leapyr & feb & >28, even months > 30, odd months > 31
+                    if (!int.TryParse(dayy, out day) || dayy.Contains(neg) || day < 0 || day > 31 || day < 1 || (year % 4 != 0 && month == 2 && day > 28) || (month % 2 == 0 && day > 30) || (month % 2 == 1 && day > 31))
+                    {
+                        Console.WriteLine("That was not a valid day. ");
+                        continue;
+                    }
+                    go = true;
                 }
-                day = Convert.ToInt32(dayy);
-
-                //day parameters
-                while (day > 31 || day < 1)
-                {
-                    Console.WriteLine("That day is invalid. Please enter a valid day.");
-                    day = Convert.ToInt32(Console.ReadLine());
-                }
-
-
-
-                //leap year feb parameters
-                while (year % 4 != 0 && month == 2 && day > 28)
-                {
-                    Console.WriteLine("This is not a valid day, please try again: ");
-                    day = Convert.ToInt32(Console.ReadLine());
-                }
-                //monthly max day parameters
-                if (month % 2 == 0 && day > 30)
-                {
-                    Console.WriteLine("This month does not have that many days, please try again: ");
-                    day = Convert.ToInt32(Console.ReadLine());
-                }
-                else if (month % 2 == 1 && day > 31)
-                {
-                    Console.WriteLine("This month does not have that many days, please try again: ");
-                    day = Convert.ToInt32(Console.ReadLine());
-                }
-
 
                 //---------------CALCULATIONS-------------------//
                 //month chart determination
@@ -130,6 +104,7 @@ namespace DOTW
                 {
                     rerun = false;
                 }
+                rerun = false;
             }
         }
     }
