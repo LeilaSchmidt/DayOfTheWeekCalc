@@ -48,11 +48,11 @@ namespace DOTW
 
 
                 //-------------DAY------------//
-                //asks for day, checks if int entered
+                //asks for day
                 Console.WriteLine("Please enter a day: ");
                 var dayy = Console.ReadLine();
 
-                //checks if input is int
+                //checks if input is int or negative
                 while (!int.TryParse(dayy, out day) || dayy.Contains(neg))
                 {
                     Console.WriteLine("This is not a valid day, please try again: ");
