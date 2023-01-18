@@ -2,7 +2,7 @@ namespace DOTW
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string[] weekdays = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
             bool rerun = true;
@@ -16,42 +16,29 @@ namespace DOTW
 
                 //-------------YEAR------------//
                 //asks for year
-                Console.WriteLine("Hello, please enter a year: ");
+                Console.WriteLine("Please enter a year: ");
                 var yearr = Console.ReadLine();
-                //checks if input is int
-                while (!int.TryParse(yearr, out year))
+                //checks if year is int or negative 
+                while (!int.TryParse(yearr, out year) || yearr.Contains(neg))
                 {
-                    Console.WriteLine("This is not an integer, please try again: ");
-                    yearr = Console.ReadLine();
-                }
-                //checks if input is negative
-                while (yearr.Contains(neg))
-                {
-                    Console.WriteLine("The year must be after the death of Christ, please try again: ");
+                    Console.WriteLine("This is not a valid year, please try again: ");
                     yearr = Console.ReadLine();
                 }
                 year = Convert.ToInt32(yearr);
 
 
-
-                //----------MONTH---------------//
-                //asks for month, checks if int entered
+                //-------------MONTH------------//
+                //asks for month
                 Console.WriteLine("Please enter a month: ");
                 var monthh = Console.ReadLine();
-
-                //checks if input is int
-                while (!int.TryParse(monthh, out month))
+                //checks if input is int or negative
+                while (!int.TryParse(monthh, out month) || monthh.Contains(neg))
                 {
-                    Console.WriteLine("This is not an integer, please try again: ");
-                    monthh = Console.ReadLine();
-                }
-                //checks if input is negative
-                while (monthh.Contains(neg))
-                {
-                    Console.WriteLine("There are no negative months, please try again: ");
+                    Console.WriteLine("This is not a valid month, please try again: ");
                     monthh = Console.ReadLine();
                 }
                 month = Convert.ToInt32(monthh);
+
                 //month parameters
                 while (month > 12 || month < 1)
                 {
@@ -60,24 +47,19 @@ namespace DOTW
                 }
 
 
-                //---------------DAY----------------//
+                //-------------DAY------------//
                 //asks for day, checks if int entered
                 Console.WriteLine("Please enter a day: ");
                 var dayy = Console.ReadLine();
 
                 //checks if input is int
-                while (!int.TryParse(dayy, out day))
+                while (!int.TryParse(dayy, out day) || dayy.Contains(neg))
                 {
-                    Console.WriteLine("This is not an integer, please try again: ");
-                    dayy = Console.ReadLine();
-                }
-                //checks if input is negative
-                while (dayy.Contains(neg))
-                {
-                    Console.WriteLine("There are no negative days, please try again: ");
+                    Console.WriteLine("This is not a valid day, please try again: ");
                     dayy = Console.ReadLine();
                 }
                 day = Convert.ToInt32(dayy);
+
                 //day parameters
                 while (day > 31 || day < 1)
                 {
@@ -107,7 +89,6 @@ namespace DOTW
 
 
                 //---------------CALCULATIONS-------------------//
-
                 //month chart determination
                 if (month > 2 && month < 12)
                 {
